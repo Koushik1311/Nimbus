@@ -7,6 +7,7 @@ import {
   UserButton,
   useUser,
 } from "@clerk/nextjs";
+import Breadcrumbs from "../features/Breadcrumbs";
 
 export default function Header() {
   const { user } = useUser();
@@ -18,6 +19,8 @@ export default function Header() {
           {`'s`} Space
         </h1>
       )}
+
+      <Breadcrumbs />
 
       <div>
         <SignedOut>

@@ -12,7 +12,7 @@ export default function NewDocumentButton() {
   const handleCreateNewDocument = () => {
     startTransition(async () => {
       const { docId } = await createNewDocument();
-      router.push(`/doc/${docId}`);
+      router.push(`/workplace/doc/${docId}`);
     });
   };
 
