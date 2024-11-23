@@ -99,10 +99,9 @@ export default function Sidebar() {
             ))}
           </>
         )}
-      </div>
 
-      {/* Shared with Me */}
-      <div>
+        {/* Shared with Me */}
+
         {groupedData.editor.length > 0 && (
           <>
             <h2 className="text-gray-500 font-semibold text-sm">

@@ -8,6 +8,8 @@ import { db } from "@/firebase";
 import { useDocumentData } from "react-firebase-hooks/firestore";
 import Editor from "./editor/Editor";
 import useOwner from "@/hooks/useOwner";
+import DeleteDocument from "./DeleteDocument";
+import InviteUser from "./InviteUser";
 
 export default function Document({ id }: { id: string }) {
   const [data, loading, error] = useDocumentData(doc(db, "documents", id));
@@ -46,7 +48,10 @@ export default function Document({ id }: { id: string }) {
           {isOwner && (
             <>
               {/* InviteUser */}
+              <InviteUser />
+
               {/* DeleteDocument */}
+              <DeleteDocument />
             </>
           )}
         </form>
