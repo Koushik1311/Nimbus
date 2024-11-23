@@ -21,8 +21,8 @@ export default function Avatars() {
       <p className="font-light text-sm">Users currently editing this page</p>
 
       <div className="flex -space-x-5">
-        {all.map((other, i) => (
-          <TooltipProvider>
+        <TooltipProvider>
+          {all.map((other, i) => (
             <Tooltip key={other?.id + i}>
               <TooltipTrigger>
                 <Avatar className="border-2 hover:z-50">
@@ -34,8 +34,8 @@ export default function Avatars() {
                 <p>{self?.id === other?.id ? "You" : other?.info.name}</p>
               </TooltipContent>
             </Tooltip>
-          </TooltipProvider>
-        ))}
+          ))}
+        </TooltipProvider>
       </div>
     </div>
   );
